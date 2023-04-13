@@ -1,0 +1,140 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="mp.master.cs" Inherits="aytek.mp" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+    <title>ABTH</title>
+
+    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/navbar.css" rel="stylesheet" />
+    <link href="style/toastr.min.css" rel="stylesheet" />
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        .b-example-divider {
+            height: 3rem;
+            background-color: rgba(0, 0, 0, .1);
+            border: solid rgba(0, 0, 0, .15);
+            border-width: 1px 0;
+            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+
+        .b-example-vr {
+            flex-shrink: 0;
+            width: 1.5rem;
+            height: 100vh;
+        }
+
+        .bi {
+            vertical-align: -.125em;
+            fill: currentColor;
+        }
+
+        .nav-scroller {
+            position: relative;
+            z-index: 2;
+            height: 2.75rem;
+            overflow-y: hidden;
+        }
+
+            .nav-scroller .nav {
+                display: flex;
+                flex-wrap: nowrap;
+                padding-bottom: 1rem;
+                margin-top: -1px;
+                overflow-x: auto;
+                text-align: center;
+                white-space: nowrap;
+                -webkit-overflow-scrolling: touch;
+            }
+    </style>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+<body>
+    <form id="form1" runat="server" class="row g-3 needs-validation was-validated" novalidate="">
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+         
+        <main>
+             
+            <nav class="navbar navbar-expand-lg bg-light rounded" aria-label="Eleventh navbar example">
+
+                <div class="container">
+                    <a class="navbar-brand" href="Anasayfa.aspx">DEPREMZEDE TAKİP</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarsExample09">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="DKayit.aspx">Depremzede Kayıt</a>
+                            </li>
+                             <li class="nav-item">
+                                <a class="nav-link" href="Ihtiyaclar.aspx">İhtiyaç Kayıt</a>
+                            </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="Sorgulama.aspx">Sorgulama</a>
+                            </li>
+
+                        </ul>
+
+                        <asp:Label ID="lblkullanici" runat="server"></asp:Label>
+                        <asp:LinkButton ID="btnadmin" runat="server" CssClass="btn btn-primary" Visible="False" PostBackUrl="~/Admin.aspx">Yönetim</asp:LinkButton>
+                        &nbsp;
+                        <asp:LinkButton ID="btncik" runat="server" CssClass="btn btn-primary" Visible="true" PostBackUrl="~/login.aspx">Çıkış</asp:LinkButton>
+
+                    </div>
+                </div>
+                 
+            </nav>
+             
+            <div>
+
+                <div class="bg-light p-5 rounded">
+
+
+                    <div class="col-sm-16 mx-auto">
+                        
+
+                            <h1 class="text-center">DEPREMZEDE İŞLEMLERİ </h1>
+                    
+
+                        <br />
+
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                             </div>
+                    </div>
+                </div>
+            
+
+        </main>
+         
+        <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="style/jquery-3.2.1.min.js"></script>
+        <script src="style/moment.js"></script>
+        <script src="style/toastr.min.js"></script>
+    </form>
+
+</body>
+</html>
+
