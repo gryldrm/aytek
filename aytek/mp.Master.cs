@@ -14,7 +14,7 @@ namespace aytek
             if (Session["k_ad"] != null)
             {
                 lblkullanici.Text = Session["k_ad"].ToString() + "-" + Session["k_rol"].ToString();
-                if (Session["k_rol"].ToString() == "Admin")
+                if (Session["k_rol"].ToString() == "admin")
                 {
                     btnadmin.Visible = true;
                 }

@@ -48,14 +48,14 @@ namespace aytek
             dd_konteyner.Items.Insert(0, new ListItem("Seçiniz", String.Empty));
             dd_konteyner.SelectedIndex = 0;
 
-            dd_konteyner0.DataSource = dt;
-            // dd_kontno0.DataBind();
-            dd_konteyner0.DataTextField = "k_tip";
-            dd_konteyner0.DataValueField = "k_tip";
-            dd_konteyner0.DataBind();
+            //dd_konteyner0.DataSource = dt;
+            //// dd_kontno0.DataBind();
+            //dd_konteyner0.DataTextField = "k_tip";
+            //dd_konteyner0.DataValueField = "k_tip";
+            //dd_konteyner0.DataBind();
 
-            dd_konteyner0.Items.Insert(0, new ListItem("Seçiniz", String.Empty));
-            dd_konteyner0.SelectedIndex = 0;
+            //dd_konteyner0.Items.Insert(0, new ListItem("Seçiniz", String.Empty));
+            //dd_konteyner0.SelectedIndex = 0;
         }
 
         private void cinsiyetyukle()
@@ -71,14 +71,14 @@ namespace aytek
             dd_cinsiyet.Items.Insert(0, new ListItem("Seçiniz", String.Empty));
             dd_cinsiyet.SelectedIndex = 0;
 
-            dd_cinsiyet0.DataSource = dt;
-            // dd_kontno0.DataBind();
-            dd_cinsiyet0.DataTextField = "d_cins";
-            dd_cinsiyet0.DataValueField = "id";
-            dd_cinsiyet0.DataBind();
+            //dd_cinsiyet0.DataSource = dt;
+            //// dd_kontno0.DataBind();
+            //dd_cinsiyet0.DataTextField = "d_cins";
+            //dd_cinsiyet0.DataValueField = "id";
+            //dd_cinsiyet0.DataBind();
 
-            dd_cinsiyet0.Items.Insert(0, new ListItem("Seçiniz", String.Empty));
-            dd_cinsiyet0.SelectedIndex = 0;
+            //dd_cinsiyet0.Items.Insert(0, new ListItem("Seçiniz", String.Empty));
+            //dd_cinsiyet0.SelectedIndex = 0;
         }
 
         private void ilyukle()
@@ -98,14 +98,14 @@ namespace aytek
             dd_gil.SelectedIndex = 0;
 
 
-            dd_gil0.DataSource = dt;
-            // dd_kontno0.DataBind();
-            dd_gil0.DataTextField = "sehir_adi";
-            dd_gil0.DataValueField = "id";
-            dd_gil0.DataBind();
+            //dd_gil0.DataSource = dt;
+            //// dd_kontno0.DataBind();
+            //dd_gil0.DataTextField = "sehir_adi";
+            //dd_gil0.DataValueField = "id";
+            //dd_gil0.DataBind();
 
-            dd_gil0.Items.Insert(0, new ListItem("Seçiniz", String.Empty));
-            dd_gil0.SelectedIndex = 0;
+            //dd_gil0.Items.Insert(0, new ListItem("Seçiniz", String.Empty));
+            //dd_gil0.SelectedIndex = 0;
         }
 
         private void datayukle()
@@ -142,7 +142,7 @@ namespace aytek
 
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Panel1.Visible = true;
+            //Panel1.Visible = true;
             btnkaydet.Visible = false;
             btn_gun.Visible = true;
 
@@ -158,8 +158,10 @@ namespace aytek
             txt_ad.Text = dt.Rows[0][2].ToString();
             txt_sad.Text = dt.Rows[0][3].ToString();
 
-            string ss = dataClass.trh_con(dt.Rows[0][4].ToString().Substring(0, 10));
+            string ss = dt.Rows[0][4].ToString().Substring(0, 10);
             dt_dtar.Text = ss;
+
+
             dd_gil.SelectedValue = dt.Rows[0][5].ToString();
             txt_tel.Text = dt.Rows[0][6].ToString();
             dd_cinsiyet.SelectedValue = dt.Rows[0][7].ToString();
@@ -171,7 +173,7 @@ namespace aytek
 
         protected void btn_yk_Click(object sender, EventArgs e)
         {
-            Panel1.Visible = true;
+            //Panel1.Visible = true;
             btnkaydet.Visible = true;
             btn_gun.Visible = false;
 
@@ -218,148 +220,148 @@ namespace aytek
         {
             //SELECT        dbo.tbl_dzede.id AS İd, dbo.tbl_dzede.d_tc AS TC, dbo.tbl_dzede.d_ad AS Adı, dbo.tbl_dzede.d_sad AS Soyadı, dbo.tbl_cinsiyet.d_cins AS Cinsiyet, dbo.tbl_iller.sehir_adi AS İl, dbo.tbl_dzede.d_dtar AS [Doğum Tarihi],              dbo.tbl_dzede.d_tel AS Telefon, dbo.tbl_dzede.d_kont AS[Kaldığı Yer], dbo.tbl_dzede.d_kontno AS No, dbo.tbl_dzede.d_ktar AS[Kayıt Tarihi], dbo.tbl_dzede.d_kuser AS Personel FROM            dbo.tbl_dzede LEFT OUTER JOIN                          dbo.tbl_cinsiyet ON dbo.tbl_dzede.d_cins = dbo.tbl_cinsiyet.id LEFT OUTER JOIN                          dbo.tbl_iller ON dbo.tbl_dzede.d_gyer = dbo.tbl_iller.id
 
-            string sorgu = "";
-            string srg_select = "SELECT TOP (1000) [İd] ,[TC] ,[Adı] ,[Soyadı] ,[Cinsiyet] ,[İl] ,[Doğum Tarihi] ,[Telefon] ,[Kaldığı Yer] ,[No] ,[Kayıt Tarihi] ,[Personel]   FROM [db_depremzede].[dbo].[View_Dzede]";
+            //string sorgu = "";
+            //string srg_select = "SELECT TOP (1000) [İd] ,[TC] ,[Adı] ,[Soyadı] ,[Cinsiyet] ,[İl] ,[Doğum Tarihi] ,[Telefon] ,[Kaldığı Yer] ,[No] ,[Kayıt Tarihi] ,[Personel]   FROM [db_depremzede].[dbo].[View_Dzede]";
 
 
 
 
-            if (txt_ad0.Text != "")
-            {
-                sorgu += " WHERE ([Adı] = '" + txt_ad0.Text.ToString() + "')";
+            //if (txt_ad0.Text != "")
+            //{
+            //    sorgu += " WHERE ([Adı] = '" + txt_ad0.Text.ToString() + "')";
 
-            }
+            //}
 
-            if (txt_sad0.Text != "")
+            //if (txt_sad0.Text != "")
 
-            {
-                if (sorgu.ToString() == "")
-                {
-                    sorgu += " WHERE ([Soyadı]  = '" + txt_sad0.Text.ToString() + "') ";
-                }
-                else
-                {
-                    sorgu += " AND  ([Soyadı]  = '" + txt_sad0.Text.ToString() + "') ";
-                }
+            //{
+            //    if (sorgu.ToString() == "")
+            //    {
+            //        sorgu += " WHERE ([Soyadı]  = '" + txt_sad0.Text.ToString() + "') ";
+            //    }
+            //    else
+            //    {
+            //        sorgu += " AND  ([Soyadı]  = '" + txt_sad0.Text.ToString() + "') ";
+            //    }
 
-            }
+            //}
 
-            if (txt_tc0.Text != "")
+            //if (txt_tc0.Text != "")
 
-            {
-                if (sorgu.ToString() == "")
-                {
-                    sorgu += " WHERE ([TC] = '" + txt_tc0.Text.ToString() + "') ";
-                }
-                else
-                {
-                    sorgu += " AND  ([TC] = '" + txt_tc0.Text.ToString() + "') ";
-                }
+            //{
+            //    if (sorgu.ToString() == "")
+            //    {
+            //        sorgu += " WHERE ([TC] = '" + txt_tc0.Text.ToString() + "') ";
+            //    }
+            //    else
+            //    {
+            //        sorgu += " AND  ([TC] = '" + txt_tc0.Text.ToString() + "') ";
+            //    }
 
-            }
+            //}
 
-            if (txt_tel0.Text != "")
+            //if (txt_tel0.Text != "")
 
-            {
-                if (sorgu.ToString() == "")
-                {
-                    sorgu += " WHERE ([Telefon] = '" + txt_tel0.Text.ToString() + "') ";
-                }
-                else
-                {
-                    sorgu += " AND  ([Telefon] = '" + txt_tel0.Text.ToString() + "') ";
-                }
+            //{
+            //    if (sorgu.ToString() == "")
+            //    {
+            //        sorgu += " WHERE ([Telefon] = '" + txt_tel0.Text.ToString() + "') ";
+            //    }
+            //    else
+            //    {
+            //        sorgu += " AND  ([Telefon] = '" + txt_tel0.Text.ToString() + "') ";
+            //    }
 
-            }
+            //}
 
-            if (dt_dtar0.Text != "")
-            {
-                // (d_dtar > CONVERT(DATETIME, '01.01.2010', 104))
-                if (sorgu.ToString() == "")
-                {
-                    sorgu += " WHERE     ( d_dtar  >=CONVERT(DATETIME, '" + dt_dtar0.Text + "', 104) )  ";
-                }
-                else
-                {
-                    sorgu += " AND     ( d_dtar  >=CONVERT(DATETIME, '" + dt_dtar0.Text + "', 104) )  ";
-                }
-            }
+            //if (dt_dtar0.Text != "")
+            //{
+            //    // (d_dtar > CONVERT(DATETIME, '01.01.2010', 104))
+            //    if (sorgu.ToString() == "")
+            //    {
+            //        sorgu += " WHERE     ( d_dtar  >=CONVERT(DATETIME, '" + dt_dtar0.Text + "', 104) )  ";
+            //    }
+            //    else
+            //    {
+            //        sorgu += " AND     ( d_dtar  >=CONVERT(DATETIME, '" + dt_dtar0.Text + "', 104) )  ";
+            //    }
+            //}
 
-            if (dt_dtar1.Text != "")
-            {
-                // (d_dtar < CONVERT(DATETIME, '01.01.2020', 104))
+            //if (dt_dtar1.Text != "")
+            //{
+            //    // (d_dtar < CONVERT(DATETIME, '01.01.2020', 104))
 
-                if (sorgu.ToString() == "")
-                {
-                    sorgu += " WHERE      ( d_dtar  <=CONVERT(DATETIME, '" + dt_dtar1.Text + "', 104) )  ";
-                }
-                else
-                {
-                    sorgu += " AND     ( d_dtar  <=CONVERT(DATETIME, '" + dt_dtar1.Text + "', 104) )  ";
-                }
-            }
-
-
-            if (dd_gil0.SelectedItem.Text != "Seçiniz")
-            {
-                if (sorgu.ToString() == "")
-                {
-                    sorgu += " WHERE ([İl] = '" + dd_gil0.SelectedItem.Text.ToString() + "') ";
-                }
-                else
-                {
-                    sorgu += " AND  ([İl] = '" + dd_gil0.SelectedItem.Text.ToString() + "') ";
-                }
-            }
-
-            if (dd_cinsiyet0.SelectedItem.Text != "Seçiniz")
-            {
-                if (sorgu.ToString() == "")
-                {
-                    sorgu += " WHERE ([Cinsiyet] = '" + dd_cinsiyet0.SelectedItem.Text.ToString() + "') ";
-                }
-                else
-                {
-                    sorgu += " AND  ([Cinsiyet] = '" + dd_cinsiyet0.SelectedItem.Text.ToString() + "') ";
-                }
-            }
+            //    if (sorgu.ToString() == "")
+            //    {
+            //        sorgu += " WHERE      ( d_dtar  <=CONVERT(DATETIME, '" + dt_dtar1.Text + "', 104) )  ";
+            //    }
+            //    else
+            //    {
+            //        sorgu += " AND     ( d_dtar  <=CONVERT(DATETIME, '" + dt_dtar1.Text + "', 104) )  ";
+            //    }
+            //}
 
 
+            //if (dd_gil0.SelectedItem.Text != "Seçiniz")
+            //{
+            //    if (sorgu.ToString() == "")
+            //    {
+            //        sorgu += " WHERE ([İl] = '" + dd_gil0.SelectedItem.Text.ToString() + "') ";
+            //    }
+            //    else
+            //    {
+            //        sorgu += " AND  ([İl] = '" + dd_gil0.SelectedItem.Text.ToString() + "') ";
+            //    }
+            //}
 
-            if (dd_konteyner0.SelectedItem.Text != "Seçiniz")
-            {
-                if (sorgu.ToString() == "")
-                {
-                    sorgu += " WHERE ([Kaldığı Yer] = '" + dd_konteyner0.SelectedItem.Text.ToString() + "') ";
-                }
-                else
-                {
-                    sorgu += " AND  ([Kaldığı Yer] = '" + dd_konteyner0.SelectedItem.Text.ToString() + "') ";
-                }
-
-                if (dd_kontno0.SelectedItem.Text != "Seçiniz")
-                {
-                    if (sorgu.ToString() == "")
-                    {
-                        sorgu += " WHERE ([No] = '" + dd_kontno0.SelectedItem.Text.ToString() + "') ";
-                    }
-                    else
-                    {
-                        sorgu += " AND  ([No] = '" + dd_kontno0.SelectedItem.Text.ToString() + "') ";
-                    }
-                }
-            }
+            //if (dd_cinsiyet0.SelectedItem.Text != "Seçiniz")
+            //{
+            //    if (sorgu.ToString() == "")
+            //    {
+            //        sorgu += " WHERE ([Cinsiyet] = '" + dd_cinsiyet0.SelectedItem.Text.ToString() + "') ";
+            //    }
+            //    else
+            //    {
+            //        sorgu += " AND  ([Cinsiyet] = '" + dd_cinsiyet0.SelectedItem.Text.ToString() + "') ";
+            //    }
+            //}
 
 
 
+            //if (dd_konteyner0.SelectedItem.Text != "Seçiniz")
+            //{
+            //    if (sorgu.ToString() == "")
+            //    {
+            //        sorgu += " WHERE ([Kaldığı Yer] = '" + dd_konteyner0.SelectedItem.Text.ToString() + "') ";
+            //    }
+            //    else
+            //    {
+            //        sorgu += " AND  ([Kaldığı Yer] = '" + dd_konteyner0.SelectedItem.Text.ToString() + "') ";
+            //    }
 
-            srg_select += sorgu.ToString() + " ORDER BY İd DESC";
-            DataTable dt = dataClass.get_tbl(srg_select.ToString());
-            GridView1.DataSource = null;
-            GridView1.DataSource = dt;
-            GridView1.DataBind();
+            //    if (dd_kontno0.SelectedItem.Text != "Seçiniz")
+            //    {
+            //        if (sorgu.ToString() == "")
+            //        {
+            //            sorgu += " WHERE ([No] = '" + dd_kontno0.SelectedItem.Text.ToString() + "') ";
+            //        }
+            //        else
+            //        {
+            //            sorgu += " AND  ([No] = '" + dd_kontno0.SelectedItem.Text.ToString() + "') ";
+            //        }
+            //    }
+            //}
 
-            Panel1.Visible = false;
+
+
+
+            //srg_select += sorgu.ToString() + " ORDER BY İd DESC";
+            //DataTable dt = dataClass.get_tbl(srg_select.ToString());
+            //GridView1.DataSource = null;
+            //GridView1.DataSource = dt;
+            //GridView1.DataBind();
+
+            //Panel1.Visible = false;
         }
 
 
@@ -367,16 +369,16 @@ namespace aytek
         protected void dd_konteyner0_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            DataTable dt = dataClass.get_tbl("SELECT TOP (100) PERCENT k_tip, k_ad FROM tbl_koncad WHERE (k_tip = '" + dd_konteyner0.SelectedItem.Text.ToString() + "') ORDER BY k_tip, k_ad");
+            //DataTable dt = dataClass.get_tbl("SELECT k_tip, k_ad FROM tbl_koncad WHERE (k_tip = '" + dd_konteyner0.SelectedItem.Text.ToString() + "') ORDER BY k_tip, k_ad");
 
-            dd_kontno0.DataSource = dt;
-            // dd_kontno0.DataBind();
-            dd_kontno0.DataTextField = "k_ad";
-            dd_kontno0.DataValueField = "k_ad";
-            dd_kontno0.DataBind();
+            //dd_kontno0.DataSource = dt;
+            //// dd_kontno0.DataBind();
+            //dd_kontno0.DataTextField = "k_ad";
+            //dd_kontno0.DataValueField = "k_ad";
+            //dd_kontno0.DataBind();
 
-            dd_kontno0.Items.Insert(0, new ListItem("Seçiniz", String.Empty));
-            dd_kontno0.SelectedIndex = 0;
+            //dd_kontno0.Items.Insert(0, new ListItem("Seçiniz", String.Empty));
+            //dd_kontno0.SelectedIndex = 0;
         }
 
         protected void Button1_Click(object sender, EventArgs e)

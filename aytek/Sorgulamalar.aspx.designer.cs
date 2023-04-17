@@ -11,143 +11,116 @@ namespace aytek
 {
 
 
-    public partial class DKayit
+    public partial class Sorgulamalar
     {
 
         /// <summary>
-        /// txt_ad control.
+        /// txt_ad0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_ad;
+        protected global::System.Web.UI.WebControls.TextBox txt_ad0;
 
         /// <summary>
-        /// dd_gil control.
+        /// txt_sad0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList dd_gil;
+        protected global::System.Web.UI.WebControls.TextBox txt_sad0;
 
         /// <summary>
-        /// btnkaydet control.
+        /// txt_tc0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnkaydet;
+        protected global::System.Web.UI.WebControls.TextBox txt_tc0;
 
         /// <summary>
-        /// btn_gun control.
+        /// dt_dtar0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_gun;
+        protected global::System.Web.UI.WebControls.TextBox dt_dtar0;
 
         /// <summary>
-        /// Button1 control.
+        /// dt_dtar1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.TextBox dt_dtar1;
 
         /// <summary>
-        /// Button2 control.
+        /// dd_gil0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
+        protected global::System.Web.UI.WebControls.DropDownList dd_gil0;
 
         /// <summary>
-        /// txt_sad control.
+        /// txt_tel0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_sad;
+        protected global::System.Web.UI.WebControls.TextBox txt_tel0;
 
         /// <summary>
-        /// txt_tel control.
+        /// dd_cinsiyet0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_tel;
+        protected global::System.Web.UI.WebControls.DropDownList dd_cinsiyet0;
 
         /// <summary>
-        /// txt_tc control.
+        /// dd_konteyner0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_tc;
+        protected global::System.Web.UI.WebControls.DropDownList dd_konteyner0;
 
         /// <summary>
-        /// dd_cinsiyet control.
+        /// dd_kontno0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList dd_cinsiyet;
+        protected global::System.Web.UI.WebControls.DropDownList dd_kontno0;
 
         /// <summary>
-        /// lblid control.
+        /// btn_yk control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblid;
+        protected global::System.Web.UI.WebControls.Button btn_yk;
 
         /// <summary>
-        /// dt_dtar control.
+        /// btnsor control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox dt_dtar;
-
-        /// <summary>
-        /// dd_konteyner control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList dd_konteyner;
-
-        /// <summary>
-        /// dd_kontno control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList dd_kontno;
-
-        /// <summary>
-        /// SqlDataSource4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource4;
+        protected global::System.Web.UI.WebControls.Button btnsor;
 
         /// <summary>
         /// GridView1 control.

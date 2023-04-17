@@ -42,12 +42,12 @@ namespace aytek
 
         protected void Button2_Click(object sender, EventArgs e)
         {
-            int drm = dataClass.ins_tbl("INSERT TOP INTO tbl_ihtiyackat(i_kategori) VALUES        (N'" + txt_kat.Text.ToString() + "')");
+            int drm = dataClass.ins_tbl("INSERT  INTO tbl_ihtiyackat(i_kategori) VALUES (N'" + txt_kat.Text.ToString() + "')");
 
             if (drm == 1)
             {
                 MessageBox.Show("Kayıt başarılı...", "Kayıt İşlemi");
-                GridView1.DataBind();
+                GridView2.DataBind();
                 dd_katt.DataBind();
             }
             else
@@ -58,12 +58,12 @@ namespace aytek
 
         protected void Button3_Click(object sender, EventArgs e)
         {
-            int drm = dataClass.ins_tbl("INSERT TOP (200) INTO tbl_ihtiyacaltk(kat, altkat) VALUES(" + dd_katt.SelectedValue.ToString() + ", N'" + txt_altk.Text.ToString() + "')");
+            int drm = dataClass.ins_tbl("INSERT INTO tbl_ihtiyacaltk(kat, altkat) VALUES(" + dd_katt.SelectedValue.ToString() + ", N'" + txt_altk.Text.ToString() + "')");
 
             if (drm == 1)
             {
                 MessageBox.Show("Kayıt başarılı...", "Kayıt İşlemi");
-                GridView1.DataBind();
+                GridView3.DataBind();
             }
             else
             {

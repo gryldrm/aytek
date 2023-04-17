@@ -53,7 +53,7 @@ namespace aytek
             string ay = dt.Month.ToString();
             string yil = dt.Year.ToString();
 
-            text = yil.ToString() + "-" + ay.ToString() + "/" + gun.ToString();
+            text = yil.ToString() + "-" + ay.ToString() + "-" + gun.ToString();
             return text.ToString();
         }
 

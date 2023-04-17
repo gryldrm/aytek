@@ -494,6 +494,7 @@
     <Content Include="assets\js\showcase.js" />
     <Content Include="assets\navbar.css" />
     <Content Include="css\app.css" />
+    <Content Include="Sorgulamalar.aspx" />
     <Content Include="DKayit.aspx" />
     <Content Include="fonts\fa-brands-400.svg" />
     <Content Include="fonts\fa-regular-400.svg" />
@@ -513,7 +514,8 @@
     <Content Include="img\photos\unsplash-3.jpg" />
     <Content Include="js\app.js" />
     <Content Include="js\app.js.LICENSE.txt" />
-    <Content Include="login.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="sqltbl.sql" />
     <Content Include="style\jquery-3.2.1.min.js" />
     <Content Include="style\moment.js" />
     <Content Include="style\toastr.min.css" />
@@ -572,6 +574,13 @@
       <DependentUpon>Anasayfa.aspx</DependentUpon>
     </Compile>
     <Compile Include="class\dataClass.cs" />
+    <Compile Include="Sorgulamalar.aspx.cs">
+      <DependentUpon>Sorgulamalar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sorgulamalar.aspx.designer.cs">
+      <DependentUpon>Sorgulamalar.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DKayit.aspx.cs">
       <DependentUpon>DKayit.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -586,12 +595,12 @@
     <Compile Include="Ihtiyaclar.aspx.designer.cs">
       <DependentUpon>Ihtiyaclar.aspx</DependentUpon>
     </Compile>
-    <Compile Include="login.aspx.cs">
-      <DependentUpon>login.aspx</DependentUpon>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="login.aspx.designer.cs">
-      <DependentUpon>login.aspx</DependentUpon>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="mp.Master.cs">
       <DependentUpon>mp.Master</DependentUpon>

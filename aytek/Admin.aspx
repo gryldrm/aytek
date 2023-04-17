@@ -93,7 +93,7 @@
                             <asp:Button ID="Button2" class="btn btn-lg btn-primary" runat="server" OnClick="Button2_Click" Text="Kaydet" />
                         </td>
                         <td>
-                            <asp:GridView ID="GridView2" class="table table-striped" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="id" DataSourceID="SqlDataSource3" Width="548px">
+                            <asp:GridView ID="GridView2" class="table table-striped" runat="server" AllowPaging="True"  AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="id" DataSourceID="SqlDataSource3" Width="100%">
                                 <Columns>
                                     <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
                                     <asp:BoundField DataField="id" HeaderText="id" InsertVisible="False" ReadOnly="True" SortExpression="id" />
@@ -137,7 +137,7 @@
                             <asp:Button ID="Button3" class="btn btn-lg btn-primary" runat="server" OnClick="Button3_Click" Text="Kaydet" />
                         </td>
                         <td>
-                            <asp:GridView ID="GridView3" class="table table-striped" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="id" DataSourceID="SqlDataSource4" Width="548px">
+                            <asp:GridView ID="GridView3" class="table table-striped" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="id" DataSourceID="SqlDataSource4" Width="100%">
                                 <Columns>
                                     <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
                                     <asp:BoundField DataField="id" HeaderText="id" InsertVisible="False" ReadOnly="True" SortExpression="id" />

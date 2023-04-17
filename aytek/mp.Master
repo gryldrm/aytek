@@ -92,7 +92,7 @@
                                 <a class="nav-link" href="Ihtiyaclar.aspx">İhtiyaç Kayıt</a>
                             </li>
                               <li class="nav-item">
-                                <a class="nav-link" href="Sorgulama.aspx">Sorgulama</a>
+                                <a class="nav-link" href="Sorgulamalar.aspx">Sorgulama</a>
                             </li>
 
                         </ul>
