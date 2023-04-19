@@ -22,21 +22,21 @@ namespace aytek
         {
             //DataList1.DataSource = dataClass.get_tbl("SELECT * FROM [tbl_chz] WHERE ([id] = " + Session["yzdr"].ToString() + ")");
             //DataList1.DataBind();
-            //Response.Clear();
-            //Response.Buffer = true;
-            //Response.AddHeader("content-disposition", "attachment;filename=TakipNo" + Session["yzdr"].ToString() + ".doc");
-            //Response.Charset = "";
-            //Response.ContentType = "application/vnd.ms-word ";
-            //StringWriter sw = new StringWriter();
-            //HtmlTextWriter hw = new HtmlTextWriter(sw);
-            //// Gridviewdakı bütün verileri aktarabilmek için sayfalama özelleğini iptal edip , Gridview’mızdaki değişikliklerin geçerli olabilmesi için tekrar dolduruyoruz
-            ////DataList1.AllowPaging = false;
-            //DataList1.DataBind();
-            //// Gridview’daki değerlerimizi html formatına renderlıyoruz
-            //DataList1.RenderControl(hw);
-            //Response.Output.Write(sw.ToString());
-            //Response.Flush();
-            //Response.End();
+            Response.Clear();
+            Response.Buffer = true;
+            Response.AddHeader("content-disposition", "attachment;filename=TakipNo" + Session["k_ad"].ToString() + ".doc");
+            Response.Charset = "";
+            Response.ContentType = "application/vnd.ms-word ";
+            StringWriter sw = new StringWriter();
+            HtmlTextWriter hw = new HtmlTextWriter(sw);
+            // Gridviewdakı bütün verileri aktarabilmek için sayfalama özelleğini iptal edip , Gridview’mızdaki değişikliklerin geçerli olabilmesi için tekrar dolduruyoruz
+           //DataList1.AllowPaging = false;
+           // DataList1.DataBind();
+            // Gridview’daki değerlerimizi html formatına renderlıyoruz
+           // DataList1.RenderControl(hw);
+            Response.Output.Write(sw.ToString());
+            Response.Flush();
+            Response.End();
 
 
         }

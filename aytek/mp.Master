@@ -94,7 +94,9 @@
                               <li class="nav-item">
                                 <a class="nav-link" href="Sorgulamalar.aspx">Sorgulama</a>
                             </li>
-
+                              <li class="nav-item">
+                                <a class="nav-link" href="Rapor.aspx">Raporla</a>
+                            </li>
                         </ul>
 
                         <asp:Label ID="lblkullanici" runat="server"></asp:Label>
