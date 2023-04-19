@@ -106,6 +106,7 @@ namespace aytek
 
             //dd_gil0.Items.Insert(0, new ListItem("Seçiniz", String.Empty));
             //dd_gil0.SelectedIndex = 0;
+              
         }
 
         private void datayukle()

@@ -494,6 +494,7 @@
     <Content Include="assets\js\showcase.js" />
     <Content Include="assets\navbar.css" />
     <Content Include="css\app.css" />
+    <Content Include="Rapor.aspx" />
     <Content Include="Sorgulamalar.aspx" />
     <Content Include="DKayit.aspx" />
     <Content Include="fonts\fa-brands-400.svg" />
@@ -574,6 +575,13 @@
       <DependentUpon>Anasayfa.aspx</DependentUpon>
     </Compile>
     <Compile Include="class\dataClass.cs" />
+    <Compile Include="Rapor.aspx.cs">
+      <DependentUpon>Rapor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rapor.aspx.designer.cs">
+      <DependentUpon>Rapor.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Sorgulamalar.aspx.cs">
       <DependentUpon>Sorgulamalar.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

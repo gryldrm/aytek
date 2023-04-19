@@ -6,7 +6,7 @@
         <div class="container-md">
         <div class="col align-self-center">
             
-                <ajaxToolkit:TabContainer ID="TabContainer1" runat="server" ActiveTabIndex="1" Width="100%">
+                <ajaxToolkit:TabContainer ID="TabContainer1" runat="server" ActiveTabIndex="0" Width="100%">
 
         <ajaxToolkit:TabPanel runat="server" HeaderText="TabPanel1" ID="TabPanel1">
             <HeaderTemplate>
@@ -170,6 +170,53 @@
                 <br />
             </ContentTemplate>
         </ajaxToolkit:TabPanel>
+
+                    <ajaxToolkit:TabPanel ID="TabPanel3" runat="server" HeaderText="TabPanel3">
+                        <HeaderTemplate>
+                            Konut Tip Tanımlama
+                        </HeaderTemplate>
+                        <ContentTemplate>
+                            <table class="w-100">
+                                <tr>
+                                    <td>Konut Tip:<asp:TextBox ID="txtknttip" runat="server"></asp:TextBox>
+                                        <br />
+                                        Konut No:<asp:TextBox ID="txtkntno" runat="server"></asp:TextBox>
+                                        <br />
+                                        Konut Kontenjan:<asp:TextBox ID="txtkntkon" runat="server"></asp:TextBox>
+                                        <br />
+                                        <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="Kaydet" />
+                                    </td>
+                                    <td>
+                                        <asp:GridView ID="GridView4" runat="server" AutoGenerateColumns="False" DataKeyNames="id" DataSourceID="SqlDataSource5">
+                                            <Columns>
+                                                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
+                                                <asp:BoundField DataField="id" HeaderText="id" InsertVisible="False" ReadOnly="True" SortExpression="id" />
+                                                <asp:BoundField DataField="k_tip" HeaderText="k_tip" SortExpression="k_tip" />
+                                                <asp:BoundField DataField="k_ad" HeaderText="k_ad" SortExpression="k_ad" />
+                                                <asp:BoundField DataField="k_kon" HeaderText="k_kon" SortExpression="k_kon" />
+                                            </Columns>
+                                        </asp:GridView>
+                                    </td>
+                                </tr>
+                            </table>
+                            <asp:SqlDataSource ID="SqlDataSource5" runat="server" ConnectionString="<%$ ConnectionStrings:db_depremzedeCs %>" DeleteCommand="DELETE FROM [tbl_koncad] WHERE [id] = @id" InsertCommand="INSERT INTO [tbl_koncad] ([k_tip], [k_ad], [k_kon]) VALUES (@k_tip, @k_ad, @k_kon)" SelectCommand="SELECT * FROM [tbl_koncad]" UpdateCommand="UPDATE [tbl_koncad] SET [k_tip] = @k_tip, [k_ad] = @k_ad, [k_kon] = @k_kon WHERE [id] = @id">
+                                <DeleteParameters>
+                                    <asp:Parameter Name="id" Type="Int32" />
+                                </DeleteParameters>
+                                <InsertParameters>
+                                    <asp:Parameter Name="k_tip" Type="String" />
+                                    <asp:Parameter Name="k_ad" Type="String" />
+                                    <asp:Parameter Name="k_kon" Type="Int32" />
+                                </InsertParameters>
+                                <UpdateParameters>
+                                    <asp:Parameter Name="k_tip" Type="String" />
+                                    <asp:Parameter Name="k_ad" Type="String" />
+                                    <asp:Parameter Name="k_kon" Type="Int32" />
+                                    <asp:Parameter Name="id" Type="Int32" />
+                                </UpdateParameters>
+                            </asp:SqlDataSource>
+                        </ContentTemplate>
+                    </ajaxToolkit:TabPanel>
 
     </ajaxToolkit:TabContainer>
                 </div>

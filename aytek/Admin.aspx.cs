@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -16,6 +17,7 @@ namespace aytek
             {
                 if (Session["k_ad"] != null)
                 {
+                    //cadyukle();
 
                 }
                 else
@@ -23,6 +25,13 @@ namespace aytek
                     Response.Redirect("login.aspx");
                 }
             }
+        }
+
+        private void cadyukle()
+        {
+            //DataTable dt = dataClass.get_tbl("SELECT * FROM [tbl_koncad]");
+            //GridView4.DataSource = dt;
+            //GridView4.DataBind();
         }
 
         protected void Button1_Click1(object sender, EventArgs e)
@@ -64,6 +73,23 @@ namespace aytek
             {
                 MessageBox.Show("Kayıt başarılı...", "Kayıt İşlemi");
                 GridView3.DataBind();
+            }
+            else
+            {
+                MessageBox.Show("Kayıt hatalı...", "Kayıt İşlemi");
+            }
+        }
+
+       
+
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+            int drm = dataClass.ins_tbl("INSERT INTO tbl_koncad(k_tip, k_ad, k_kon) VALUES (N'" + txtknttip.Text.ToString() + "', N'" + txtkntno.Text.ToString() + "', " + txtkntkon.Text.ToString() + ")");
+
+            if (drm == 1)
+            {
+                MessageBox.Show("Kayıt başarılı...", "Kayıt İşlemi");
+                GridView4.DataBind();
             }
             else
             {

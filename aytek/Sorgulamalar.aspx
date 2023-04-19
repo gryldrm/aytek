@@ -76,11 +76,9 @@
                     </tr>
                     <tr>
                         <td>
-                            <asp:Button class="btn btn-lg btn-primary" ID="btn_yk" runat="server" OnClick="btn_yk_Click" Text="Yeni Kayıt" Width="106px" />
-                        </td>
+                            &nbsp;</td>
                         <td>
-                            &nbsp;&nbsp;
-                            <asp:Button class="btn btn-lg btn-primary" ID="btnsor" runat="server" Text="Sorgula" OnClick="btnsor_Click" Width="106px" />
+                            &nbsp;<asp:Button class="btn btn-lg btn-primary" ID="btnsor" runat="server" Text="Sorgula" OnClick="btnsor_Click" Width="106px" />
                             <br />
                         </td>
                     </tr>
